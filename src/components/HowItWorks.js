@@ -21,6 +21,7 @@ export default class HowItWorks extends Component {
     this.setState({ steps: this.getSimplifiedSteps(data) });
   }
 
+  //Function: returns simplified steps
   getSimplifiedSteps(steps) {
     //sorting steps in order by the “stepNumber” value
     steps.sort((a, b) => a.stepNumber - b.stepNumber);
@@ -60,10 +61,13 @@ export default class HowItWorks extends Component {
           {steps.map(step => (
             <div key={step.id} className="grid-col">
               <div className="card">
-                <h1>0{step.stepNumber}</h1>
-                <hr />
-                <h6>{step.title}</h6>
-                <p>{step.body}</p>
+                <h1 className="card__number">
+                  {Number(step.stepNumber < 10 && "0")}
+                  {step.stepNumber}
+                </h1>
+                <hr className="card__hr" />
+                <h6 className="card__title">{step.title}</h6>
+                <p className="card__body">{step.body}</p>
               </div>
             </div>
           ))}

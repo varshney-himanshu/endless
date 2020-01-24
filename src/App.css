@@ -54,7 +54,7 @@ body {
   padding-left: 15%;
 }
 
-.header__content p {
+.header__content__text {
   margin-top: 2%;
   margin-bottom: 5%;
   font-size: 15px;
@@ -62,16 +62,16 @@ body {
   letter-spacing: 0.5px;
 }
 
-.header .header__content h1 {
+.header__content__heading2 {
   font-weight: 300;
 }
 
-.header .header__content h4 {
+.header__content__heading1 {
   font-weight: 300;
   margin-bottom: 2%;
 }
 
-.header .header__content button {
+.header__content__button {
   padding: 8px 25px;
   border-radius: 120px;
   outline: none;
@@ -81,16 +81,14 @@ body {
   transition: all 0.8s;
 }
 
-.header .header__content button:hover,
-.header .header__content button:active,
-.header .header__content button:focus {
+.header__content__button:hover,
+.header__content__button:active,
+.header__content__button:focus {
   cursor: pointer;
   background-color: #247966;
 }
 
 /*------------how it works-------- */
-
-/* #F2F1EF */
 
 .how-it-works {
   background-color: #f2f1ef;
@@ -119,9 +117,9 @@ body {
   position: relative;
 }
 
-.card h1 {
+.card__number {
   font-weight: 400;
-  padding-bottom: 5px;
+  padding-bottom: 5p__title;
 }
 
 .card hr {
@@ -130,31 +128,33 @@ body {
   margin: auto;
 }
 
-.card h6 {
+.card__title {
   margin-top: 12px;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
-.card p {
+.card__body {
   font-size: 15px;
 }
 
-@media only screen and (max-width: 900px) {
-  .grid-row {
-    width: 80%;
-  }
+/*-----responsive css for smaller screens---- */
 
+@media only screen and (max-width: 900px) {
   .header__content {
     width: 90%;
     padding-left: 10%;
   }
 
-  .header__content p {
+  .header__content__text {
     margin-top: 2%;
     margin-bottom: 5%;
     font-size: 15px;
     width: 60%;
+  }
+
+  .grid-row {
+    width: 80%;
   }
 }
 
@@ -164,7 +164,7 @@ body {
     padding-left: 5%;
   }
 
-  .header__content p {
+  .header__content__text {
     margin-top: 2%;
     margin-bottom: 5%;
     font-size: 15px;
@@ -182,14 +182,14 @@ body {
     width: 90%;
   }
 
-  .card h1 {
+  .card__number {
     font-size: 30px;
   }
 
-  .card h6 {
+  .card__title {
     font-size: 14px;
   }
-  .card p {
+  .card__body {
     font-size: 14px;
   }
 }
